@@ -4,10 +4,7 @@
   "description": "[WIP] Web code examples for JavaScript Everywhere by Adam Scott, published by O'Reilly Media",
   "main": "src/index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
-    "final": "parcel final/index.html",
     "deploy:src": "parcel build src/index.html --public-url ./",
-    "deploy:final": "parcel build final/index.html --public-url ./",
     "cy:run": "cypress run",
     "cy:open": "cypress open"
   },
