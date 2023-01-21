@@ -1,1 +1,4 @@
-# Application "Notedly" (WEB, React) on book "JS-everywhere"
+# "Notedly" (WEB, React) 
+### Application from book "JS-everywhere"
+
+• 
