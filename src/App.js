@@ -16,7 +16,7 @@ import GlobalStyle from './components/GlobalStyle';
 import Pages from './pages';
 
 // Настраиваем API URI и кэш
-const uri = process.env.API_URI;
+const uri = process.env.API_URI || "https://shy-tan-eagle-coat.cyclic.app/api";
 const cache = new InMemoryCache();
 
 // Настраиваем прикрепление заголовков к запросам
