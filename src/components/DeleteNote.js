@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 import ButtonAsLink from './ButtonAsLink';
 
 import { DELETE_NOTE } from '../gql/mutation';
-import { GET_MY_NOTES, GET_NOTES } from '../gql/query';
+import { GET_MY_NOTES, GET_NOTES, GET_MY_FAVORITES } from '../gql/query';
 
 const DeleteNote = props => {
   const [deleteNote] = useMutation(DELETE_NOTE, {
@@ -13,7 +13,11 @@ const DeleteNote = props => {
       id: props.noteId
     },
     // Повторно получаем запросы списка заметок, чтобы обновить кэш
-    refetchQueries: [{ query: GET_MY_NOTES }, { query: GET_NOTES }],
+    refetchQueries: [
+      { query: GET_MY_NOTES },
+      { query: GET_NOTES },
+      { query: GET_MY_FAVORITES }
+    ],
     onCompleted: data => {
       // Перенаправление пользователя на страницу 'mynotes'
       props.history.push('/mynotes');

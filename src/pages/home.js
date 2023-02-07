@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useQuery, gql } from '@apollo/client';
 import { GET_NOTES } from '../gql/query';
 import NoteFeed from '../components/NoteFeed';
-import Button from '../../src/components/Button';
+import Button from '../components/Button';
 
 const Home = () => {
   useEffect(() => {
